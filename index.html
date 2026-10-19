@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>e-Kehadiran Peserta</title>
+  
+  <!-- Menggunakan Favicon Kemnaker sesuai kode .gs Anda -->
+  <!-- <link rel="icon" href="https://tracerstudy.exprodi.co.id/frontend/img/logo_poltrada.png" /> -->
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/9/98/Logo_Kementerian_Ketenagakerjaan_%282016%29.png" />
+  
+  <style>
+    /* Menghilangkan scrollbar pada body agar tampilan bersih */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #ffffff;
+    }
+
+    /* Container untuk memastikan iframe memenuhi layar penuh secara responsif */
+    .iframe-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="iframe-container">
+    <iframe
+      id="app-frame"
+      src="https://script.google.com/macros/s/AKfycbxqsqpSVuqTGn6i1xA_TjWBkyPC93D3QyKJ3caW10S40DknvgOUpE5WtDH4eKks6-Av/exec"
+      allow="geolocation; microphone; camera">
+    </iframe>
+  </div>
+
+  <script>
+    // Opsional: Memastikan iframe tetap penuh jika ada perubahan ukuran layar ponsel
+    window.addEventListener('resize', function() {
+      document.getElementById('app-frame').style.height = window.innerHeight + 'px';
+    });
+  </script>
+</body>
+</html>
